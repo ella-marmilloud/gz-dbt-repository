@@ -38,3 +38,35 @@ sources:
             tests:
               - unique
               - not_null
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: ads performance metrics of Adwords
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+          - not_null:
+              column_name: "(date_date || '-' || campaign_key)"
+      - name: bing
+        identifier: raw_gz_bing
+        description: ads performance metrics of Bing
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+          - not_null:
+              column_name: "(date_date || '-' || campaign_key)"
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: ads performance metrics of Criteo
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+          - not_null:
+              column_name: "(date_date || '-' || campaign_key)"
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: ads performance metrics of Facebook
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
+          - not_null:
+              column_name: "(date_date || '-' || campaign_key)"
